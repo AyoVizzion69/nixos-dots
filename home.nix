@@ -6,7 +6,7 @@
 	home.homeDirectory = "/home/vizzion";
 	programs.git.enable = true;
 	home.stateVersion = "26.05";
-	programs.bash = {
+	programs.zsh = {
 	    enable = true;
 	    shellAliases = {
 	        btw = "echo nixos is tuff";
