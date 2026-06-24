@@ -181,7 +181,7 @@ window-rule {
     // block-out-from "screencast"
 }
 
-/-window-rule {
+window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
