@@ -1,10 +1,9 @@
-{ config, pkgs, ... }:
+{config, pkgs, ... }:
 
 {
-  imports =
-    [ 
-      /etc/nixos/hardware-configuration.nix
-    ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -29,9 +28,9 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # Window Manager
-  programs.sway.enable = true; 
+  programs.sway.enable = true;
 
   services.xserver.xkb = {
     layout = "us";
@@ -42,8 +41,11 @@
   users.users."vizzion" = {
     isNormalUser = true;
     description = "vizzion";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -52,35 +54,38 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  swayfx
-  neovim
-  git
-  pfetch
-  tealdeer
-  bat
-  ghostty
-  cmatrix
-  firefox
-  fuzzel
-  waybar
-  xwayland-satellite
-  thunar
-  mako
-  autotiling
+    swayfx
+    neovim
+    git
+    pfetch
+    tealdeer
+    bat
+    ghostty
+    cmatrix
+    firefox
+    fuzzel
+    waybar
+    xwayland-satellite
+    thunar
+    mako
+    autotiling
   ];
 
-fonts.packages = with pkgs; [
-  nerd-fonts.jetbrains-mono
-];
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
 
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   services = {
-  desktopManager.plasma6.enable = false;
-  displayManager.ly.enable = true;
-  openssh.enable = true;
- };
-  
+    desktopManager.plasma6.enable = false;
+    displayManager.ly.enable = true;
+    openssh.enable = true;
+  };
 
   system.stateVersion = "26.05";
 }
+
