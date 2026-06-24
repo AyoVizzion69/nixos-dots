@@ -11,7 +11,6 @@
       btw = "echo nixos is tuff";
     };
   };
-  home.file.".config/sway".source = ./config/sway;
   home.file.".config/nvim".source = ./config/nvim;
   home.file.".config/fuzzel".source = ./config/fuzzel;
   home.file.".config/foot".source = ./config/foot;

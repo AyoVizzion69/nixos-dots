@@ -30,7 +30,6 @@
   };
 
   # Window Manager
-  programs.sway.enable = true;
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -53,7 +52,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    swayfx
+    foot
+    noctalia-shell
     neovim
     git
     pfetch
