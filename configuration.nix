@@ -69,6 +69,7 @@
     mako
     autotiling
     gedit
+    swaybg
   ];
 
   fonts.packages = with pkgs; [

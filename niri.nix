@@ -138,7 +138,7 @@ layout {
 // Add lines like this to spawn processes at startup.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-
+spawn-at-startup "swaybg" "-i" "/path/to/your/wallpaper.jpg" "-m" "fill"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
