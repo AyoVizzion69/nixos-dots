@@ -1,9 +1,8 @@
-
-
 {
   description = "A very basic flake";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    wrappers.url = "github:BirdeeHub/nix-wrapper-modules";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,12 +14,14 @@
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+      ./niri.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -34,4 +35,3 @@
       };
     };
 }
-

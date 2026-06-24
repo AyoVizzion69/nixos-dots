@@ -31,7 +31,6 @@
 
   # Window Manager
   programs.sway.enable = true;
-
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -69,6 +68,7 @@
     thunar
     mako
     autotiling
+    gedit
   ];
 
   fonts.packages = with pkgs; [
