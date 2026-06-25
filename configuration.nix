@@ -83,7 +83,7 @@
     bat
     ghostty
     cmatrix
-    firefox
+    brave
     fuzzel
     waybar
     xwayland-satellite
