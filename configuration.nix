@@ -1,4 +1,4 @@
-{config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -28,14 +28,25 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
+  
   # Window Manager
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
- programs.zsh = {
+  # Doas Configuration
+  security.sudo.enable = false;
+  security.doas.enable = true;
+  security.doas.extraRules = [
+    {
+      users = [ "vizzion" ];
+      keepEnv = true;
+      persist = true;
+    }
+  ];
+
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestions.enable = true;
@@ -43,7 +54,7 @@
 
     ohMyZsh = {
       enable = true;
-      theme = "robbyrussell"; # Change to your preferred theme
+      theme = "robbyrussell";
       plugins = [
         "git"
         "docker"
@@ -51,7 +62,7 @@
       ];
     };
   };
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+
   users.users."vizzion" = {
     isNormalUser = true;
     description = "vizzion";
@@ -63,11 +74,8 @@
     packages = with pkgs; [ ];
   };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     spotify
     grim
@@ -111,4 +119,3 @@
 
   system.stateVersion = "26.05";
 }
-
