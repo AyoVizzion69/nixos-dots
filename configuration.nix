@@ -59,6 +59,7 @@
     foot
     noctalia-shell
     neovim
+    quickshell
     git
     pfetch
     tealdeer
