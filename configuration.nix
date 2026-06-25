@@ -35,10 +35,27 @@
     variant = "";
   };
 
+ programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    ohMyZsh = {
+      enable = true;
+      theme = "robbyrussell"; # Change to your preferred theme
+      plugins = [
+        "git"
+        "docker"
+        "npm"
+      ];
+    };
+  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."vizzion" = {
     isNormalUser = true;
     description = "vizzion";
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
