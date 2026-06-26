@@ -77,6 +77,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    cbonsai
     spotify
     grim
     discord

@@ -19,7 +19,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -47,7 +47,7 @@ input {
 
     // warp-mouse-to-focus
 
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 /-output "eDP-1" {
@@ -64,7 +64,7 @@ input {
 }
 
 layout {
-    gaps 16
+    gaps 5
 
     center-focused-column "never"
 
@@ -84,9 +84,8 @@ layout {
     // `draw-border-with-background`.
 
     focus-ring {
-        off
 
-        width 4
+        width 1.5
 
         active-color "#7fc8ff"
 
@@ -100,7 +99,7 @@ layout {
     border {
         off
 
-        width 4
+        width 1.5
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -113,7 +112,7 @@ layout {
     }
 
     shadow {
-        // on
+         on
 
         // draw-behind-window true
 
@@ -304,15 +303,15 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
 
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
