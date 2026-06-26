@@ -82,12 +82,13 @@
     grim
     discord
     steam
-    foot
+    kitty
     noctalia-shell
     neovim
     quickshell
     git
     pfetch
+    onefetch
     tealdeer
     bat
     ghostty
