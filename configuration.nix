@@ -77,6 +77,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    cava
+    lavat
     cbonsai
     spotify
     grim
