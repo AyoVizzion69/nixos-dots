@@ -31,7 +31,11 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.vizzion = import ./home.nix;
+              users.vizzion = {
+              imports = [
+              ./home.nix
+              ];
+              };
               backupFileExtension = "backup";
             };
           }

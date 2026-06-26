@@ -17,6 +17,7 @@
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/kitty".source = ./config/kitty;
   home.packages = with pkgs; [
+    fastfetch
     neovim
     nil
     ripgrep
