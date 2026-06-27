@@ -91,7 +91,6 @@
     spotify
     grim
     discord
-    steam
     kitty
     neovim
     quickshell
@@ -110,10 +109,16 @@
     thunar
     gedit
     swaybg
+    btop
+    tty-clock
+    steam-devices-udev-rules
   ];
+  
+  services.flatpak.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    terminus_font
   ];
 
   security.rtkit.enable = true;
@@ -128,6 +133,18 @@
     "nix-command"
     "flakes"
   ];
+
+  programs.steam = {
+  enable = true;
+  remotePlay.openFirewall = true;
+  dedicatedServer.openFirewall = true;
+  localNetworkGameTransfers.openFirewall = true;
+};
+
+  hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+};   
 
   services = {
     desktopManager.plasma6.enable = false;

@@ -8,6 +8,7 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+      steam = "steam -cef-disable-gpu";
       btw = "echo nixos is tuff";
     };
   };
