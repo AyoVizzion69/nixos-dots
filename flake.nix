@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     wrappers.url = "github:BirdeeHub/nix-wrapper-modules";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     helium = {
   url = "github:schembriaiden/helium-browser-nix-flake";
   inputs.nixpkgs.follows = "nixpkgs";
@@ -16,6 +17,7 @@
     {
       self,
       nixpkgs,
+      chaotic,
       home-manager,
       ...
     }@inputs:
@@ -26,6 +28,7 @@
         modules = [
           ./configuration.nix
           ./niri.nix
+          chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {
