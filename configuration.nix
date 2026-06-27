@@ -91,6 +91,7 @@
     neovim
     quickshell
     git
+    spotify-player
     feedr
     onefetch
     cmatrix
