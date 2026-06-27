@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, spicetify-nix, ... }:
 
 {
   imports = [
+    spicetify-nix.nixosModules.spicetify
     /etc/nixos/hardware-configuration.nix
   ];
 
@@ -45,6 +46,7 @@
       persist = true;
     }
   ];
+  
 
   programs.zsh = {
     enable = true;
@@ -89,11 +91,8 @@
     neovim
     quickshell
     git
-    pfetch
+    newsboat
     onefetch
-    tealdeer
-    bat
-    ghostty
     cmatrix
     brave
     modrinth-app
@@ -101,8 +100,6 @@
     waybar
     xwayland-satellite
     thunar
-    mako
-    autotiling
     gedit
     swaybg
   ];

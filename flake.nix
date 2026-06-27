@@ -1,6 +1,7 @@
 {
   description = "A very basic flake";
   inputs = {
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     wrappers.url = "github:BirdeeHub/nix-wrapper-modules";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
@@ -18,13 +19,14 @@
       self,
       nixpkgs,
       chaotic,
+      spicetify-nix,
       home-manager,
       ...
     }@inputs:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs spicetify-nix; };
         modules = [
           ./configuration.nix
           ./niri.nix
