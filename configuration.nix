@@ -96,6 +96,7 @@
     ghostty
     cmatrix
     brave
+    modrinth-app
     fuzzel
     waybar
     xwayland-satellite
