@@ -16,6 +16,7 @@
   home.file.".config/foot".source = ./config/foot;
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/kitty".source = ./config/kitty;
+  home.file.".config/fastfetch".source = ./config/fastfetch;
   home.packages = with pkgs; [
     fastfetch
     neovim
