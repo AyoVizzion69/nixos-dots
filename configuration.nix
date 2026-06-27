@@ -91,7 +91,7 @@
     neovim
     quickshell
     git
-    newsboat
+    feedr
     onefetch
     cmatrix
     brave
