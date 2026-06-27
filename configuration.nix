@@ -83,7 +83,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
+  
   environment.systemPackages = with pkgs; [
     cava
     lavat
@@ -99,6 +99,7 @@
     python3
     spotify-player
     feedr
+    pavucontrol
     onefetch
     cmatrix
     brave
@@ -114,6 +115,14 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
+
+  security.rtkit.enable = true;
+   services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   nix.settings.experimental-features = [
     "nix-command"
