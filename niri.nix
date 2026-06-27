@@ -137,7 +137,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 spawn-at-startup "noctalia-shell"
-spawn-sh-at-startup "swaybg -i ~/nixos-dots/wp.jpg"
+spawn-sh-at-startup "swaybg -i ~/nixos-dots/wp1.jpg"
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
