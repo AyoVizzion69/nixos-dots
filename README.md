@@ -3,4 +3,5 @@ git clone https://github.com/AyoVizzion69/nixos-dots
 
 
 cd nixos-dots
+
 sudo nixos-rebuild switch --flake --impure
