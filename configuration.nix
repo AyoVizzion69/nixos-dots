@@ -87,10 +87,10 @@
     discord
     steam
     kitty
-    noctalia-shell
     neovim
     quickshell
     git
+    python3
     spotify-player
     feedr
     onefetch

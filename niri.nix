@@ -86,7 +86,7 @@ layout {
 
         width 1.5
 
-        active-color "#4C5E31"
+        active-color "#89DCEB"
 
         inactive-color "#505050"
 
@@ -136,8 +136,8 @@ layout {
 // Add lines like this to spawn processes at startup.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-spawn-at-startup "noctalia-shell"
-spawn-sh-at-startup "swaybg -i ~/nixos-dots/wp1.jpg"
+spawn-at-startup "waybar"
+spawn-sh-at-startup "swaybg -i ~/nixos-dots/wp2.png"
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
