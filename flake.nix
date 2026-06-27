@@ -1,6 +1,7 @@
 {
   description = "A very basic flake";
   inputs = {
+    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     wrappers.url = "github:BirdeeHub/nix-wrapper-modules";

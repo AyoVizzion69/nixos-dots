@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, spicetify-nix, ... }:
+{ config, pkgs, inputs, lib, spicetify-nix, ... }:
 
 {
   imports = [
@@ -6,11 +6,15 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.device = "nodev";
+  boot.loader.grub = {
+  efiSupport = true;
+  device = "nodev";
+  useOSProber = true;
+  theme = inputs.nixos-grub-themes.packages.${pkgs.system}.minegrub;
+  };
+  
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.useOSProber = true;
+  
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   networking.hostName = "nixos";
