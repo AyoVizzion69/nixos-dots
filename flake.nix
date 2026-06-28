@@ -1,6 +1,8 @@
 {
   description = "A very basic flake";
   inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -17,6 +19,7 @@
   };
   outputs =
     {
+      flake-parts,
       self,
       nixpkgs,
       chaotic,
@@ -30,7 +33,7 @@
         specialArgs = { inherit inputs spicetify-nix; };
         modules = [
           ./configuration.nix
-          ./niri.nix
+          ./modules/niri.nix
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
           {
