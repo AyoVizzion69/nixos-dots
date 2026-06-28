@@ -103,7 +103,6 @@
     pavucontrol
     onefetch
     cmatrix
-    brave
     opencode
     fuzzel
     waybar
@@ -112,10 +111,11 @@
     gedit
     swaybg
     btop
+    brave
     tty-clock
     steam-devices-udev-rules
   ];
-  
+ 
   services.flatpak.enable = true;
 
   fonts.packages = with pkgs; [
