@@ -85,6 +85,8 @@
   nixpkgs.config.allowUnfree = true;
   
   environment.systemPackages = with pkgs; [
+    gimp
+    cloudflared
     cava
     lavat
     cbonsai
@@ -102,7 +104,7 @@
     onefetch
     cmatrix
     brave
-    modrinth-app
+    opencode
     fuzzel
     waybar
     xwayland-satellite
