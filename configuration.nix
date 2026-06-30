@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, spicetify-nix, ... }:
+{ config, pkgs, inputs, lib, spicetify-nix, system, ... }:
 
 {
   imports = [
@@ -84,6 +84,7 @@
 
   nixpkgs.config.allowUnfree = true;
   
+
   environment.systemPackages = with pkgs; [
     gimp
     cloudflared
@@ -117,6 +118,7 @@
     vscode
     tty-clock
     steam-devices-udev-rules
+    gnumake
     mangohud
     protonup-qt
   ];
@@ -140,6 +142,8 @@
     "nix-command"
     "flakes"
   ];
+
+  programs.dwl.enable = true;
 
   programs.gamescope = {
       enable = true;
