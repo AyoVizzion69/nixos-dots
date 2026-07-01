@@ -6,7 +6,11 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  boot.loader.limine.enable = true;
+  boot.loader.limine = {
+      enable = true;
+      enableEditor = true;
+      maxGenerations = 10;
+    };
 
   
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
