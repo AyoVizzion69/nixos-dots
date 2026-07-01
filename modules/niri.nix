@@ -201,6 +201,8 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+Z hotkey-overlay-title="Open a Browser: zen" { spawn "zen"; }
+    Mod+E hotkey-overlay-title="Open a File Browser: thunar" { spawn "thunar"; }
     Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
