@@ -64,7 +64,7 @@ input {
 }
 
 layout {
-    gaps 5
+    gaps 10
 
     center-focused-column "never"
 
@@ -156,6 +156,21 @@ animations {
     // slowdown 3.0
 }
 
+window-rule {
+    match app-id="^foot$"
+    background-effect {
+        xray true
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+    }
+}
 
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#

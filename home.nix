@@ -14,11 +14,9 @@
   };
   home.file.".config/nvim".source = ./config/nvim;
   home.file.".config/fuzzel".source = ./config/fuzzel;
-  home.file.".config/foot".source = ./config/foot;
   home.file.".config/waybar".source = ./config/waybar;
-  home.file.".config/kitty".source = ./config/kitty;
   home.file.".config/fastfetch".source = ./config/fastfetch;
-  home.file.".config/dwl".source = ./config/dwl;
+  home.file.".config/kitty".source = ./config/kitty;
   home.packages = with pkgs; [
     fastfetch
     neovim

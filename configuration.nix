@@ -89,6 +89,7 @@
     gimp
     cloudflared
     cava
+    yazi
     lavat
     cbonsai
     spotify
@@ -143,7 +144,6 @@
     "flakes"
   ];
 
-  programs.dwl.enable = true;
 
   programs.gamescope = {
       enable = true;
