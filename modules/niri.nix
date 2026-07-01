@@ -136,6 +136,7 @@ layout {
 // Add lines like this to spawn processes at startup.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+spawn-at-startup "mako"
 spawn-at-startup "waybar"
 spawn-sh-at-startup "swaybg -i ~/nixos-dots/walls/wp3.jpg"
 hotkey-overlay {
@@ -206,7 +207,7 @@ binds {
     Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-
+    
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }

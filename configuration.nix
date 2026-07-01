@@ -118,6 +118,7 @@
     vscode
     tty-clock
     steam-devices-udev-rules
+    mako
     gnumake
     mangohud
     protonup-qt

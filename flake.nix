@@ -8,10 +8,6 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     wrappers.url = "github:BirdeeHub/nix-wrapper-modules";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    helium = {
-  url = "github:schembriaiden/helium-browser-nix-flake";
-  inputs.nixpkgs.follows = "nixpkgs";
-};
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
