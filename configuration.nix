@@ -118,6 +118,10 @@
     vscode
     tty-clock
     steam-devices-udev-rules
+    taisei
+    rofi
+    nitch
+    kew
     mako
     gnumake
     mangohud
