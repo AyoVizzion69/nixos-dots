@@ -4,7 +4,6 @@
     zen-browser.url = "github:youwen5/zen-browser-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
-    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     wrappers.url = "github:BirdeeHub/nix-wrapper-modules";

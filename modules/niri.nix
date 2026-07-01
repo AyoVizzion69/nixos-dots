@@ -164,6 +164,7 @@ window-rule {
     }
 }
 
+
 layer-rule {
     match namespace="^launcher$"
 
