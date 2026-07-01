@@ -118,6 +118,7 @@
     vscode
     tty-clock
     steam-devices-udev-rules
+    jp2a
     taisei
     rofi
     nitch
