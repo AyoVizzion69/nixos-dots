@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Vizzion's NixOS configuration";
   inputs = {
     zen-browser.url = "github:youwen5/zen-browser-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
