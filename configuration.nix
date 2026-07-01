@@ -35,7 +35,12 @@
   };
   
   # Window Manager
-
+  services.xserver.windowManager.dwm = {
+      enable = true;
+      package = pkgs.dwm.overrideAttrs {
+          src = ./config/dwm;
+        };
+    };
 
   # Doas Configuration
   security.sudo.enable = false;
