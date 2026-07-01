@@ -35,10 +35,6 @@
   };
   
   # Window Manager
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
 
   # Doas Configuration
