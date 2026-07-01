@@ -86,6 +86,7 @@
   
 
   environment.systemPackages = with pkgs; [
+    inputs.zen-browser.packages.${pkgs.system}.default
     gimp
     cloudflared
     cava
@@ -113,7 +114,6 @@
     gedit
     swaybg
     btop
-    brave
     ani-cli
     luajit
     vscode

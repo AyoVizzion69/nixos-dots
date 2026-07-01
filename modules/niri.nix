@@ -137,7 +137,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 spawn-at-startup "waybar"
-spawn-sh-at-startup "swaybg -i ~/nixos-dots/walls/wp2.png"
+spawn-sh-at-startup "swaybg -i ~/nixos-dots/walls/wp3.jpg"
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
@@ -360,7 +360,7 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    Mod+V       { toggle-window-floating; }
+    Mod+Space       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     Mod+W { toggle-column-tabbed-display; }
