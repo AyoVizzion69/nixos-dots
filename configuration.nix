@@ -40,6 +40,7 @@
     variant = "";
   };
 
+
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
