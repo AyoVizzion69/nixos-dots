@@ -124,6 +124,7 @@
     gnumake
     mangohud
     protonup-qt
+    nicotine-plus
   ];
  
   services.flatpak.enable = true;
