@@ -36,6 +36,7 @@
   
   # Window Manager
     programs.sway.enable = true;
+    programs.dwl.enable = true;
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
