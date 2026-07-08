@@ -36,7 +36,12 @@
   
   # Window Manager
     programs.sway.enable = true;
-    programs.dwl.enable = true;
+    services.xserver.windowManager.dwm = {
+        enable = true;
+        package = pkgs.dwm.overrideAttrs {
+            src = ./config/dwm;
+          };
+      };
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
