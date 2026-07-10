@@ -36,12 +36,8 @@
   
   # Window Manager
     programs.sway.enable = true;
-    services.xserver.windowManager.dwm = {
-        enable = true;
-        package = pkgs.dwm.overrideAttrs {
-            src = ./config/dwm;
-          };
-      };
+    services.xserver.enable = true;
+    services.xserver.windowManager.dwm.enable = true;
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
@@ -86,6 +82,8 @@
   
 
   environment.systemPackages = with pkgs; [
+    dmenu
+    st
     inputs.zen-browser.packages.${pkgs.system}.default
     gimp
     cloudflared
