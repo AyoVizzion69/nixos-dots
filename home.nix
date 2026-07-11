@@ -5,6 +5,17 @@
   home.homeDirectory = "/home/vizzion";
   programs.git.enable = true;
   home.stateVersion = "26.05";
+  programs.foot = {
+  enable = true;
+  settings = {
+    main = {
+      font = "JetBrainsMono Nerdfont:size=10";
+    };
+    colors-dark = {
+        alpha = "0.8";
+      };
+  };
+};
   programs.zsh = {
     enable = true;
     shellAliases = {

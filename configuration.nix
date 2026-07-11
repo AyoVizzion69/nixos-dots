@@ -35,7 +35,10 @@
   };
   
   # Window Manager
-    programs.sway.enable = true;
+    programs.sway = {
+        enable = true;
+        package = pkgs.swayfx;
+      };
     services.xserver.enable = true;
     services.xserver.displayManager.startx.enable = true;
   # Doas Configuration
@@ -126,6 +129,7 @@
     kew
     mako
     gnumake
+    swayfx
     autotiling
     mangohud
     protonup-qt

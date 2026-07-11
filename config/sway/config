@@ -4,9 +4,11 @@
 #
 # Read `man 5 sway` for a complete reference.
 # Gaps
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 3
 
+# Blur
+blur enable
 # Border
 default_border none
 # Autostart
