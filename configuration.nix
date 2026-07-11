@@ -88,6 +88,7 @@
     dmenu
     st
     inputs.zen-browser.packages.${pkgs.system}.default
+    gajim
     gimp
     cloudflared
     cava
@@ -181,6 +182,7 @@
     displayManager.ly.enable = true;
     openssh.enable = true;
   };
+  
 
   system.stateVersion = "26.05";
 }
