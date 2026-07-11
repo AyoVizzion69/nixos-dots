@@ -91,7 +91,7 @@
     gajim
     gimp
     cloudflared
-    weechat
+    senpai
     cava
     yazi
     lavat
