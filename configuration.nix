@@ -101,7 +101,6 @@
     foot
     kitty
     helix
-    neovim
     quickshell
     git
     python3
