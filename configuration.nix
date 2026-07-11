@@ -100,6 +100,7 @@
     discord
     foot
     kitty
+    helix
     neovim
     quickshell
     git
