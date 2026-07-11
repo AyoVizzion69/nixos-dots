@@ -91,6 +91,7 @@
     gajim
     gimp
     cloudflared
+    weechat
     cava
     yazi
     lavat
