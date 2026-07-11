@@ -38,12 +38,6 @@
     programs.sway.enable = true;
     services.xserver.enable = true;
     services.xserver.displayManager.startx.enable = true;
-    services.xserver.windowManager.dwm = {
-    enable = true;
-    package = pkgs.dwm.overrideAttrs {
-        src = ./config/dwm;
-    };
-};
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
@@ -100,6 +94,7 @@
     spotify
     grim
     discord
+    foot
     kitty
     neovim
     quickshell
@@ -131,6 +126,7 @@
     kew
     mako
     gnumake
+    autotiling
     mangohud
     protonup-qt
     nicotine-plus

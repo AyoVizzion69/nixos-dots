@@ -18,7 +18,7 @@
   home.file.".config/fastfetch".source = ./config/fastfetch;
   home.file.".config/kitty".source = ./config/kitty;
   home.file.".config/rofi".source = ./config/rofi;
-  home.file.".config/dwm".source = ./config/dwm;
+  home.file.".config/sway".source = ./config/sway;
   home.packages = with pkgs; [
     fastfetch
     neovim
