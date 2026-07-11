@@ -9,7 +9,7 @@
   enable = true;
   settings = {
     main = {
-      font = "JetBrainsMono Nerdfont:size=10";
+      font = "Terminus:size=11";
     };
     colors-dark = {
         alpha = "0.8";

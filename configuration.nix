@@ -131,6 +131,7 @@
     gnumake
     swayfx
     autotiling
+    cozette
     mangohud
     protonup-qt
     nicotine-plus
