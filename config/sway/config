@@ -30,7 +30,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg ~/nixos-dots/walls/wp1.jpg fill
+output * bg ~/nixos-dots/walls/wp5.png fill
 #
 # Example configuration:
 #
