@@ -1,6 +1,7 @@
 {
   description = "Vizzion's NixOS configuration";
   inputs = {
+    xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay?ref=dev-26.11";
     zen-browser.url = "github:youwen5/zen-browser-flake";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
@@ -32,6 +33,8 @@
           ./modules/niri.nix
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
+          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
+           inputs.xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
           {
             home-manager = {
               useGlobalPkgs = true;

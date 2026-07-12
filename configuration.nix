@@ -41,6 +41,14 @@
       };
     services.xserver.enable = true;
     services.xserver.displayManager.startx.enable = true;
+    services.xserver.windowManager.dwm.enable = true;
+    services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+    src = ./config/dwm;
+    patches = [
+    ./config/dwm/patches/dwm-cfacts-vanitygaps-6.4_combo.diff
+    ./config/dwm/patches/dwm-autostart-20210120-cb3f58a.diff
+  ];
+  };
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
@@ -92,6 +100,7 @@
     gimp
     cloudflared
     senpai
+    alacritty
     cava
     yazi
     lavat
@@ -102,10 +111,14 @@
     foot
     kitty
     helix
+    obs-studio
     quickshell
     git
     python3
     spotify-player
+    mpv
+    quodlibet-full
+    feh
     feedr
     pavucontrol
     efibootmgr

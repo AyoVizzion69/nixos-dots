@@ -5,6 +5,14 @@
   home.homeDirectory = "/home/vizzion";
   programs.git.enable = true;
   home.stateVersion = "26.05";
+  programs.alacritty = {
+    enable = true;
+    settings = {
+       window = {
+       opacity = 0.8;  
+    };
+    };
+  };
   programs.helix = {
   enable = true;
   settings = {
@@ -31,6 +39,8 @@
       btw = "echo nixos is tuff";
     };
   };
+  home.file.".dwm/autostart.sh".source = ./config/dwm;
+  home.file.".zshrc".source = ./.zshrc;
   home.file.".config/fuzzel".source = ./config/fuzzel;
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/fastfetch".source = ./config/fastfetch;
