@@ -105,6 +105,7 @@
     yazi
     lavat
     cbonsai
+    xdpyinfo
     spotify
     grim
     discord
@@ -115,7 +116,6 @@
     quickshell
     git
     python3
-    spotify-player
     mpv
     quodlibet-full
     feh
