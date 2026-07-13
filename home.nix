@@ -62,6 +62,9 @@
     nixpkgs-fmt
     nodejs
     gcc
+    (slstatus.override {
+      conf = ./config/slstatus/config.h;
+    })
   ];
 }
 

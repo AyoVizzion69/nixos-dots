@@ -47,6 +47,7 @@
     patches = [
     ./config/dwm/patches/dwm-cfacts-vanitygaps-6.4_combo.diff
     ./config/dwm/patches/dwm-autostart-20210120-cb3f58a.diff
+    ./config/dwm/patches/dwm-status2d.diff
   ];
   };
   # Doas Configuration
