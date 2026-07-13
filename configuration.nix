@@ -109,6 +109,7 @@
     cbonsai
     xdpyinfo
     picom
+    ffmpeg
     spotify
     grim
     discord
