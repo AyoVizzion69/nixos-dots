@@ -11,6 +11,12 @@
        window = {
        opacity = 0.8;  
     };
+    colors = {
+      primary = {
+        background =  "#2b1a20";
+        foreground = "#a6e3e9";
+      };
+    };
     };
   };
   programs.helix = {
@@ -39,8 +45,10 @@
       btw = "echo nixos is tuff";
     };
   };
-  home.file.".dwm/autostart.sh".source = ./config/dwm;
-  home.file.".zshrc".source = ./.zshrc;
+  home.file.".dwm/autostart.sh" = {
+    source = ./config/dwm/autostart.sh;
+    executable = true;
+  };
   home.file.".config/fuzzel".source = ./config/fuzzel;
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/fastfetch".source = ./config/fastfetch;

@@ -93,6 +93,7 @@
   
 
   environment.systemPackages = with pkgs; [
+    yt-dlp
     dmenu
     st
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -106,6 +107,7 @@
     lavat
     cbonsai
     xdpyinfo
+    picom
     spotify
     grim
     discord

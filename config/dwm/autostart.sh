@@ -1,2 +1,4 @@
 #!/bin/sh
-feh --bg-scale '~/nixos-dots/walls/wp4.jpg' &
+feh --bg-scale "$HOME/nixos-dots/walls/maxresdefault.jpg" &
+picom -b --backend glx --config ~/.config/picom/picom.conf &
+
