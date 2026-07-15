@@ -3,14 +3,12 @@
   pkgs,
   inputs,
   lib,
-  spicetify-nix,
   system,
   ...
 }:
 
 {
   imports = [
-    spicetify-nix.nixosModules.spicetify
     /etc/nixos/hardware-configuration.nix
   ];
 
@@ -121,7 +119,7 @@
     grim
     discord
     foot
-    kitty
+    vim
     helix
     obs-studio
     quickshell
@@ -138,7 +136,6 @@
     opencode
     fuzzel
     waybar
-    xwayland-satellite
     thunar
     gedit
     swaybg

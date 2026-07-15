@@ -204,7 +204,7 @@ let
 
           Mod+Z hotkey-overlay-title="Open a Browser: zen" { spawn "zen"; }
           Mod+E hotkey-overlay-title="Open a File Browser: thunar" { spawn "thunar"; }
-          Mod+RETURN hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+          Mod+RETURN hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
           Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
           Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
           

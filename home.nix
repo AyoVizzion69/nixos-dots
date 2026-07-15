@@ -1,10 +1,29 @@
 { config, pkgs, ... }:
-
 {
-  home.username = "vizzion";
-  home.homeDirectory = "/home/vizzion";
+home = {
+  username = "vizzion";
+  homeDirectory = "/home/vizzion";
+  stateVersion = "26.05";
+  packages = with pkgs; [
+  fastfetch
+  nil
+  ripgrep
+  nixpkgs-fmt
+  nodejs
+  gcc    
+  ];
+
+  file.".dwm/autostart.sh" = {
+    source = ./config/dwm/autostart.sh;
+    executable = true;
+  };
+  file.".config/fuzzel".source = ./config/fuzzel;
+  file.".config/waybar".source = ./config/waybar;
+  file.".config/fastfetch".source = ./config/fastfetch;
+  file.".config/rofi".source = ./config/rofi;
+  file.".config/sway".source = ./config/sway;
+};
   programs.git.enable = true;
-  home.stateVersion = "26.05";
   programs.alacritty = {
     enable = true;
     settings = {
@@ -44,26 +63,5 @@
       steam = "steam -cef-disable-gpu";
       btw = "echo nixos is tuff";
     };
-  };
-  home.file.".dwm/autostart.sh" = {
-    source = ./config/dwm/autostart.sh;
-    executable = true;
-  };
-  home.file.".config/fuzzel".source = ./config/fuzzel;
-  home.file.".config/waybar".source = ./config/waybar;
-  home.file.".config/fastfetch".source = ./config/fastfetch;
-  home.file.".config/kitty".source = ./config/kitty;
-  home.file.".config/rofi".source = ./config/rofi;
-  home.file.".config/sway".source = ./config/sway;
-  home.packages = with pkgs; [
-    fastfetch
-    nil
-    ripgrep
-    nixpkgs-fmt
-    nodejs
-    gcc
-    (slstatus.override {
-      conf = ./config/slstatus/config.h;
-    })
-  ];
+ };
 }
