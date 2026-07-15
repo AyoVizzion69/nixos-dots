@@ -1,4 +1,12 @@
-{ config, pkgs, inputs, lib, spicetify-nix, system, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  spicetify-nix,
+  system,
+  ...
+}:
 
 {
   imports = [
@@ -7,12 +15,11 @@
   ];
 
   boot.loader.limine = {
-      enable = true;
-      enableEditor = true;
-      maxGenerations = 10;
-    };
+    enable = true;
+    enableEditor = true;
+    maxGenerations = 10;
+  };
 
-  
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   networking.hostName = "nixos";
@@ -33,22 +40,22 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # Window Manager
-    programs.sway = {
-        enable = true;
-        package = pkgs.swayfx;
-      };
-    services.xserver.enable = true;
-    services.xserver.displayManager.startx.enable = true;
-    services.xserver.windowManager.dwm.enable = true;
-    services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+  programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  };
+  services.xserver.enable = true;
+  services.xserver.displayManager.startx.enable = true;
+  services.xserver.windowManager.dwm.enable = true;
+  services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     src = ./config/dwm;
     patches = [
-    ./config/dwm/patches/dwm-cfacts-vanitygaps-6.4_combo.diff
-    ./config/dwm/patches/dwm-autostart-20210120-cb3f58a.diff
-    ./config/dwm/patches/dwm-status2d.diff
-  ];
+      ./config/dwm/patches/dwm-cfacts-vanitygaps-6.4_combo.diff
+      ./config/dwm/patches/dwm-autostart-20210120-cb3f58a.diff
+      ./config/dwm/patches/dwm-status2d.diff
+    ];
   };
   # Doas Configuration
   security.sudo.enable = false;
@@ -60,7 +67,6 @@
       persist = true;
     }
   ];
-  
 
   programs.zsh = {
     enable = true;
@@ -91,14 +97,15 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  
 
   environment.systemPackages = with pkgs; [
+    lix
     yt-dlp
     dmenu
     st
-    inputs.zen-browser.packages.${pkgs.system}.default
-    gajim
+    vivaldi
+    scrot
+    dino
     gimp
     cloudflared
     senpai
@@ -155,7 +162,7 @@
     protonup-qt
     nicotine-plus
   ];
- 
+
   services.flatpak.enable = true;
 
   fonts.packages = with pkgs; [
@@ -164,7 +171,7 @@
   ];
 
   security.rtkit.enable = true;
-   services.pipewire = {
+  services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
@@ -176,31 +183,29 @@
     "flakes"
   ];
 
-
   programs.gamescope = {
-      enable = true;
+    enable = true;
     capSysNice = true;
-    };
-  
+  };
+
   programs.steam = {
-  enable = true;
-  gamescopeSession.enable = true;
-  remotePlay.openFirewall = true;
-  dedicatedServer.openFirewall = true;
-  localNetworkGameTransfers.openFirewall = true;
-};
+    enable = true;
+    gamescopeSession.enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
 
   hardware.graphics = {
-  enable = true;
-  enable32Bit = true;
-};   
+    enable = true;
+    enable32Bit = true;
+  };
 
   services = {
     desktopManager.plasma6.enable = false;
     displayManager.ly.enable = true;
     openssh.enable = true;
   };
-  
 
   system.stateVersion = "26.05";
 }

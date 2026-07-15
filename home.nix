@@ -8,36 +8,36 @@
   programs.alacritty = {
     enable = true;
     settings = {
-       window = {
-       opacity = 0.8;  
-    };
-    colors = {
-      primary = {
-        background =  "#2b1a20";
-        foreground = "#a6e3e9";
+      window = {
+        opacity = 0.8;
       };
-    };
+      colors = {
+        primary = {
+          background = "#2b1a20";
+          foreground = "#a6e3e9";
+        };
+      };
     };
   };
   programs.helix = {
-  enable = true;
-  settings = {
-    theme = "rose_pine";
-  };
-};
-  programs.foot = {
-  enable = true;
-  settings = {
-    main = {
-      font = "Terminus:size=11";
+    enable = true;
+    settings = {
+      theme = "rose_pine";
     };
-    colors-dark = {
+  };
+  programs.foot = {
+    enable = true;
+    settings = {
+      main = {
+        font = "Terminus:size=11";
+      };
+      colors-dark = {
         alpha = "0.8";
         background = "191724";
         foreground = "e0def4";
       };
+    };
   };
-};
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -67,4 +67,3 @@
     })
   ];
 }
-
