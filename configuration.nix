@@ -136,7 +136,7 @@
     opencode
     fuzzel
     waybar
-    thunar
+    pcmanfm
     gedit
     swaybg
     btop
