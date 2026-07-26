@@ -12,16 +12,6 @@ home = {
   nodejs
   gcc    
   ];
-
-  file.".dwm/autostart.sh" = {
-    source = ./config/dwm/autostart.sh;
-    executable = true;
-  };
-  file.".config/fuzzel".source = ./config/fuzzel;
-  file.".config/waybar".source = ./config/waybar;
-  file.".config/fastfetch".source = ./config/fastfetch;
-  file.".config/rofi".source = ./config/rofi;
-  file.".config/sway".source = ./config/sway;
 };
   programs.git.enable = true;
   programs.alacritty = {

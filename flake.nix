@@ -2,6 +2,7 @@
   description = "Vizzion's NixOS configuration";
   inputs = {
     # strict nix shit
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -14,19 +15,34 @@
     };
     chaotic = {
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.56.0";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  
+   nixConfig = {
+    extra-substituters = [
+      "https://attic.xuyh0120.win/lantian"
+      "https://hyprland.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+    ];
+  };
+
   outputs =
     {
       flake-parts,
       self,
       nixpkgs,
       chaotic,
+      hyprland,
       home-manager,
       ...
     }@inputs:
@@ -35,8 +51,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
-          ./modules/niri.nix
+          ./modules/hosts/t480-workstation
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
           inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
@@ -47,7 +62,7 @@
               useUserPackages = true;
               users.vizzion = {
                 imports = [
-                  ./home.nix
+                  ./modules/hosts/t480-workstation/home.nix
                 ];
               };
               backupFileExtension = "backup";

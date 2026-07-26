@@ -9,7 +9,8 @@
 
 {
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ../..
+    ./hardware-configuration.nix
   ];
 
   boot.loader.limine = {
@@ -18,7 +19,6 @@
     maxGenerations = 10;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -39,6 +39,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+
   # Window Manager
   programs.sway = {
     enable = true;
@@ -46,15 +47,6 @@
   };
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
-  services.xserver.windowManager.dwm.enable = true;
-  services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-    src = ./config/dwm;
-    patches = [
-      ./config/dwm/patches/dwm-cfacts-vanitygaps-6.4_combo.diff
-      ./config/dwm/patches/dwm-autostart-20210120-cb3f58a.diff
-      ./config/dwm/patches/dwm-status2d.diff
-    ];
-  };
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
@@ -115,6 +107,7 @@
     xdpyinfo
     picom
     ffmpeg
+    tree
     spotify
     grim
     discord
