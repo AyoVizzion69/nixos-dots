@@ -83,7 +83,12 @@ home = {
               blur = {
                   enabled = true,
                   size = 3,
-                  passes = 1,
+                  passes = 5,
+                  new_optimizations = true,
+                  xray = false,
+
+                  vibrancy = 0,
+                  vibrancy_darkness = 0.38,
               },
           },
           input = {
