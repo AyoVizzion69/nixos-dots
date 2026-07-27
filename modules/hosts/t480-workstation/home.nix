@@ -17,47 +17,9 @@ home = {
   programs.git.enable = true;
   programs.alacritty = {
     enable = true;
-    settings = {
-      window = {
-        opacity = 0.8;
       };
-      colors = {
-        primary = {
-          background = "#1e1e2e";
-          foreground = "#cdd6f4";
-        };
-        cursor = {
-          text = "#1e1e2e";
-          cursor = "#f5e0dc";
-        };
-        normal = {
-          black = "#45475a";
-          red = "#f38ba8";
-          green = "#a6e3a1";
-          yellow = "#f9e2af";
-          blue = "#89b4fa";
-          magenta = "#cba6f7";
-          cyan = "#94e2d5";
-          white = "#bac2de";
-        };
-        bright = {
-          black = "#585b70";
-          red = "#f38ba8";
-          green = "#a6e3a1";
-          yellow = "#f9e2af";
-          blue = "#89b4fa";
-          magenta = "#cba6f7";
-          cyan = "#94e2d5";
-          white = "#a6adc8";
-        };
-      };
-    };
-  };
   programs.helix = {
     enable = true;
-    settings = {
-      theme = "rose_pine";
-    };
   };
   wayland.windowManager.hyprland = {
     enable = true;
@@ -149,31 +111,6 @@ hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" })
   };
   programs.kitty = {
     enable = true;
-    settings = {
-      background_opacity = "0.8";
-      background = "#1e1e2e";
-      foreground = "#cdd6f4";
-      cursor = "#f5e0dc";
-      cursor_text_color = "#1e1e2e";
-      selection_background = "#585b70";
-      selection_foreground = "#cdd6f4";
-      color0 = "#45475a";
-      color1 = "#f38ba8";
-      color2 = "#a6e3a1";
-      color3 = "#f9e2af";
-      color4 = "#89b4fa";
-      color5 = "#cba6f7";
-      color6 = "#94e2d5";
-      color7 = "#bac2de";
-      color8 = "#585b70";
-      color9 = "#f38ba8";
-      color10 = "#a6e3a1";
-      color11 = "#f9e2af";
-      color12 = "#89b4fa";
-      color13 = "#cba6f7";
-      color14 = "#94e2d5";
-      color15 = "#a6adc8";
-    };
   };
   programs.waybar = {
     enable = true;

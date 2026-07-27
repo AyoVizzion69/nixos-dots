@@ -12,8 +12,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+    url = "github:nix-community/stylix";
+    inputs.nixpkgs.follows = "nixpkgs";
+   };
   };
-  
    nixConfig = {
     extra-substituters = [
       "https://attic.xuyh0120.win/lantian"
@@ -29,6 +32,7 @@
     {
       self,
       nixpkgs,
+      stylix,
       hyprland,
       home-manager,
       ...
@@ -39,6 +43,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./modules/hosts/t480-workstation
+          stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = {

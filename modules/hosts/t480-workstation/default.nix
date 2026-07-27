@@ -19,7 +19,6 @@
     maxGenerations = 10;
   };
 
-
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
