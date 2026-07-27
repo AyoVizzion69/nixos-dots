@@ -118,10 +118,6 @@ home = {
           hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
           hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
       end
-
-      hl.on("hyprland.start", function()
-          hl.spawn("waybar")
-      end)
     '';
   };
   services.hyprpaper = {

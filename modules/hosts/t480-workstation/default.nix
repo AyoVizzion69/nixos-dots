@@ -41,12 +41,8 @@
 
 
   # Window Manager
-  programs.sway = {
-    enable = true;
-    package = pkgs.swayfx;
-  };
-  services.xserver.enable = true;
-  services.xserver.displayManager.startx.enable = true;
+  services.xserver.enable = false;
+  services.xserver.displayManager.startx.enable = false;
   # Doas Configuration
   security.sudo.enable = false;
   security.doas.enable = true;
@@ -93,18 +89,15 @@
     yt-dlp
     dmenu
     st
-    vivaldi
     scrot
     dino
     gimp
     cloudflared
     senpai
-    alacritty
     cava
     yazi
     lavat
     cbonsai
-    xdpyinfo
     picom
     ffmpeg
     tree
@@ -120,34 +113,25 @@
     python3
     mpv
     quodlibet-full
-    feh
     feedr
     pavucontrol
     efibootmgr
     onefetch
     cmatrix
     opencode
-    fuzzel
     waybar
     pcmanfm
     gedit
-    swaybg
     btop
     ani-cli
     luajit
     vscode
     tty-clock
-    steam-devices-udev-rules
-    jp2a
     taisei
-    rofi
     nitch
     kew
     mako
     gnumake
-    swayfx
-    autotiling
-    cozette
     mangohud
     protonup-qt
     nicotine-plus
