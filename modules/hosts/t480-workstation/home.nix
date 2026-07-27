@@ -113,6 +113,10 @@ home = {
       hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("wofi --show drun"))
       hl.bind(mainMod .. " + M", hl.dsp.exit())
 
+      hl.on("hyprland.start", function ()
+      hl.exec_cmd("waybar")
+    end)
+    
       for i = 1, 9 do
           local key = i % 10
           hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
@@ -166,7 +170,7 @@ home = {
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 1;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
         modules-right = [ "pulseaudio" "network" "clock" ];
