@@ -69,12 +69,17 @@ home = {
           },
       })
 
+      hl.window_rule({
+    name = "kitty-opacity",
+    match = { class = "kitty" },
+    opacity = 0.8
+})
       hl.gesture({
           fingers = 3,
           direction = "horizontal",
           action = "workspace",
       })
-
+      
       hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
       hl.bind(mainMod .. " + Q", hl.dsp.window.close())
       hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("wofi --show drun"))
