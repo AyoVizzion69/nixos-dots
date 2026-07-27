@@ -119,6 +119,8 @@ home = {
       hl.bind(mainMod .. " + M", hl.dsp.exit())
        hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
       hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+      hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
       hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 
