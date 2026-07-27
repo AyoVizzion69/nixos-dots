@@ -117,6 +117,10 @@ home = {
       hl.bind(mainMod .. " + Q", hl.dsp.window.close())
       hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("wofi --show drun"))
       hl.bind(mainMod .. " + M", hl.dsp.exit())
+       hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+      hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+
+      hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 
       hl.on("hyprland.start", function ()
       hl.exec_cmd("waybar")
@@ -132,11 +136,11 @@ home = {
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "${./walls/wp3.jpg}" ];
+      preload = [ "${./walls/city.jpg}" ];
       wallpaper = [
         {
           monitor = "";
-          path = "${./walls/wp3.jpg}";
+          path = "${./walls/city.jpg}";
         }
       ];
     };
