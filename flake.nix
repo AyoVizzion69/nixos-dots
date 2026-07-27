@@ -3,19 +3,8 @@
   inputs = {
     # strict nix shit
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    wrappers.url = "github:BirdeeHub/nix-wrapper-modules";
-
     # other stuff
-    xlibre-overlay = {
-      url = "git+https://codeberg.org/takagemacoed/xlibre-overlay?ref=dev-26.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    };
     hyprland = {
       url = "github:hyprwm/Hyprland/v0.56.0";
     };
@@ -38,10 +27,8 @@
 
   outputs =
     {
-      flake-parts,
       self,
       nixpkgs,
-      chaotic,
       hyprland,
       home-manager,
       ...
@@ -52,10 +39,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./modules/hosts/t480-workstation
-          chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
-          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
-          inputs.xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
           {
             home-manager = {
               useGlobalPkgs = true;
