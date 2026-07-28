@@ -64,6 +64,7 @@ home = {
               },
           },
           misc = {
+              disable_splash_rendering = true;
               force_default_wallpaper = 0,
               background_color = "rgba(1e1e2eff)",
           },
