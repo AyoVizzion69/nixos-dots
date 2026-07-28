@@ -29,9 +29,9 @@ home = {
 
       hl.config({
           general = {
-              gaps_in = 10,
+              gaps_in = 12,
               gaps_out = 10,
-              border_size = 1,
+              border_size = 0,
               resize_on_border = true,
               hover_icon_on_border = true,
               layout = "fibonacci",
