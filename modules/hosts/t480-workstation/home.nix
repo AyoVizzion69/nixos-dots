@@ -41,7 +41,7 @@ home = {
               },
           },
           decoration = {
-              rounding = 1,
+              rounding = 12,
               blur = {
                   enabled = true,
                   size = 3,
