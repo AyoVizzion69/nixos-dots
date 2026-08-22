@@ -5,5 +5,6 @@
     ./librewolf.nix
     ./fetch.nix
     ./zoxide.nix
+    ./cube.nix
   ];
 }

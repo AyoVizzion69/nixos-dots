@@ -5,6 +5,9 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     # other stuff
+    cube = {
+      url = "github:noahburchell/cube";
+    };
     hyprland = {
       url = "github:hyprwm/Hyprland/v0.56.0";
     };
