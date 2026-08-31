@@ -6,5 +6,6 @@
     ./fetch.nix
     ./zoxide.nix
     ./cube.nix
+    ./prism.nix
   ];
 }
