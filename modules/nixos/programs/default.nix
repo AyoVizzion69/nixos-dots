@@ -7,5 +7,6 @@
     ./zoxide.nix
     ./cube.nix
     ./prism.nix
+    ./handbrake.nix
   ];
 }
